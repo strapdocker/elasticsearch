@@ -4,7 +4,7 @@ RUN echo -e '#!/bin/sh' "\nexit 0" >  /usr/sbin/policy-rc.d
 RUN apt-get -qq -y update
 RUN apt-get -qq -y upgrade
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl sudo
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl
 RUN curl http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
 RUN echo "deb http://packages.elasticsearch.org/elasticsearch/1.0/debian stable main" >> /etc/apt/sources.list
 RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get install -y elasticsearch
