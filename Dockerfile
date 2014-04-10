@@ -1,6 +1,6 @@
 FROM strapdocker/java:latest
 
-RUN echo -e '#!/bin/sh' "\nexit 0" >  /usr/sbin/policy-rc.d
+RUN echo '#!/bin/sh' "\nexit 0" >  /usr/sbin/policy-rc.d
 RUN apt-get -qq -y update
 RUN apt-get -qq -y upgrade
 
