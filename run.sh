@@ -124,12 +124,12 @@ checkJava
 
 log_daemon_msg "Starting $DESC"
 
-pid=`pidofproc -p $PID_FILE elasticsearch`
-if [ -n "$pid" ] ; then
-    log_begin_msg "Already running."
-    log_end_msg 0
-    exit 0
-fi
+#pid=`pidofproc -p $PID_FILE elasticsearch`
+#if [ -n "$pid" ] ; then
+#    log_begin_msg "Already running."
+#    log_end_msg 0
+#    exit 0
+#fi
 
 # Prepare environment
 mkdir -p "$LOG_DIR" "$DATA_DIR" "$WORK_DIR" && chown "$ES_USER":"$ES_GROUP" "$LOG_DIR" "$DATA_DIR" "$WORK_DIR"
